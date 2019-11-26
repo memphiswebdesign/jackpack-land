@@ -48,8 +48,13 @@ ul, ol, dl, figure,
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Odibee Sans', Helvetica, Arial, sans-serif;
+    letter-spacing: 0.03em;
+    margin: 0 0 0.08em 0;
 }
 
+p {
+    font-size: $base-font-size * 1.08;
+}
 
 /**
  * Images
@@ -90,11 +95,16 @@ li {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+h1 {
+    font-size: 2rem;
+
+    @media (min-width: 676px) {font-size: 2.4rem;}
 }
-
-
+h2 {font-size: 1.6rem;}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
 
 /**
  * Links

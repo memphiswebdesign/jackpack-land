@@ -14,9 +14,9 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font-family: "Merriweather", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.62;
   font-weight: 300;
   color: #111;
   background-color: #fdfdfd;
@@ -38,6 +38,14 @@ ul, ol, dl, figure,
 .highlight {
   margin-bottom: 15px; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Odibee Sans', Helvetica, Arial, sans-serif;
+  letter-spacing: 0.03em;
+  margin: 0 0 0.08em 0; }
+
+p {
+  font-size: 17.28px; }
+
 /**
  * Images
  */
@@ -52,7 +60,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 16px; }
 
 /**
  * Lists
@@ -67,8 +75,14 @@ li > ol {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 300; }
+h1 {
+  font-size: 2rem; }
+  @media (min-width: 676px) {
+    h1 {
+      font-size: 2.4rem; } }
+
+h2 {
+  font-size: 1.6rem; }
 
 /**
  * Links
@@ -181,7 +195,7 @@ pre {
     display: none; }
   .site-nav .page-link {
     color: #111;
-    line-height: 1.5; }
+    line-height: 1.62; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
   @media screen and (max-width: 600px) {
@@ -284,7 +298,7 @@ pre {
     margin-bottom: 30px; }
 
 .post-meta {
-  font-size: 14px;
+  font-size: 16px;
   color: #828282; }
 
 .post-link {
@@ -322,6 +336,19 @@ pre {
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; }
+  .embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 /**
  * Syntax highlighting styles
@@ -463,7 +490,7 @@ pre {
     color: #099; }
 
 .slideshow {
-  background-color: #485f3f;
+  background-color: #000;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -495,30 +522,18 @@ pre {
   opacity: 0;
   z-index: 0;
   -webkit-backface-visibility: hidden;
-  animation: imageAnimation 36s linear infinite 0s; }
+  animation: imageAnimation 18s linear infinite 0s; }
 
 .slideshow li:nth-child(1) span {
-  background-image: url("../images/header-meadow-view-farms.jpg"); }
+  background-image: url("../images/store-bg-1.jpg"); }
 
 .slideshow li:nth-child(2) span {
-  background-image: url("../images/mvf-kitchen.jpg");
+  background-image: url("../images/store-bg-2.jpg");
   animation-delay: 6s; }
 
 .slideshow li:nth-child(3) span {
-  background-image: url("../images/sun-room.jpg");
+  background-image: url("../images/store-bg-3.jpg");
   animation-delay: 12s; }
-
-.slideshow li:nth-child(4) span {
-  background-image: url("../images/barn-inside.jpg");
-  animation-delay: 18s; }
-
-.slideshow li:nth-child(5) span {
-  background-image: url("../images/front-purgala.jpg");
-  animation-delay: 24s; }
-
-.slideshow li:nth-child(6) span {
-  background-image: url("../images/back-deck.jpg");
-  animation-delay: 30s; }
 
 .slideshow li:nth-child(2) div {
   animation-delay: 6s; }
@@ -526,28 +541,19 @@ pre {
 .slideshow li:nth-child(3) div {
   animation-delay: 12s; }
 
-.slideshow li:nth-child(4) div {
-  animation-delay: 18s; }
-
-.slideshow li:nth-child(5) div {
-  animation-delay: 24s; }
-
-.slideshow li:nth-child(6) div {
-  animation-delay: 30s; }
-
 /* Animation for the slideshow images */
 @keyframes imageAnimation {
   0% {
     opacity: 0;
     animation-timing-function: ease-in; }
-  8% {
+  20% {
     opacity: 1;
     transform: scale(1.05);
     animation-timing-function: ease-out; }
-  17% {
+  40% {
     opacity: 1;
     transform: scale(1.1); }
-  25% {
+  50% {
     opacity: 0;
     transform: scale(1.1); }
   100% {
@@ -564,14 +570,19 @@ main {
   padding: 2vh 15px;
   z-index: 10; }
   main section {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 3vh 6vw 5vh 6vw;
+    background-color: rgba(255, 255, 255, 0.94);
+    padding: 0;
     text-align: center;
     border-radius: 8px;
     min-height: 50vh; }
-  main .logo {
-    margin: 0 0 30px 0;
-    text-align: center; }
+  main article {
+    padding: 3vh 3vw 3vh 3vw; }
+  main div.logo {
+    padding: 4vh 6vw;
+    text-align: center;
+    background-color: #000;
+    border-radius: 8px 8px 0 0; }
   main #logo {
-    max-width: 300px;
-    width: 72%; }
+    max-width: 325px;
+    width: 72%;
+    margin: 12px 0; }

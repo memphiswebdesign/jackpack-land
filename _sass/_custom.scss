@@ -44,11 +44,11 @@
     background-image: url('../images/store-bg-1.jpg');
 }
 .slideshow li:nth-child(2) span {
-    background-image: url('../images/store-bg-1.jpg');
+    background-image: url('../images/store-bg-2.jpg');
     animation-delay: 6s;
 }
 .slideshow li:nth-child(3) span {
-    background-image: url('../images/store-bg-1.jpg');
+    background-image: url('../images/store-bg-3.jpg');
     animation-delay: 12s;
 }
 .slideshow li:nth-child(2) div {animation-delay: 6s;}
@@ -91,20 +91,25 @@ main {
 
 
     section {
-        background-color: rgba(#fff, 0.9);
-        padding: 3vh 6vw 5vh 6vw;
+        background-color: rgba(#fff, 0.94);
+        padding: 0;
         text-align: center;
         border-radius: 8px;
         min-height: 50vh;
     }
 
-    .logo {
-        margin: 0 0 30px 0;
+    article {padding: 3vh 3vw 3vh 3vw;}
+
+    div.logo {
+        padding: 4vh 6vw;
         text-align: center;
+        background-color: #000;
+        border-radius: 8px 8px 0 0;
     }
 
     #logo {
-        max-width: 300px;
+        max-width: 325px;
         width: 72%;
+        margin: 12px 0;
     }
 }
